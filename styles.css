@@ -1,3 +1,46 @@
+@media only screen and (max-width:1000px){
+    body{
+        display: none;
+    }
+}
+
 html, body{
     background-color: #41322C;
 }
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+}
+
+.container{
+    height: 90vh;
+    display: grid;
+    place-items: center;
+}
+
+.envelope-wrapper{
+    background-color: #FFB8C1;
+    margin: auto;
+    width: 45%;
+    padding: 10px;
+    height: 55%;
+}
+
+#email-input{
+    width: 30%;
+    margin: 0;
+    position: absolute;
+    top: 43%; 
+    right: 35%; 
+}
+
+a:link{
+    text-decoration: none;
+}
+a, p{
+    color: white;
+}
+
