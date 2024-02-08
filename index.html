@@ -13,21 +13,26 @@
     <body>
         <div class="container">
             <div class="envelope-wrapper">
-                <div class="envelope" id="envelope-prompt">
-                    <img src="images/logos/ccb_logo.png" alt="CCB 2025 logo" style="height: 4vw; float: right;">
+                <script src="script.js">
+                </script>
+                <img src="images/logos/ccb_logo.png" alt="CCB 2025 logo" style="height: 4vw; float: right;">
 
+                <div class="envelope" id="envelope-prompt">
                     <input type="text" id="email-input" placeholder="Enter your Brown email...">
-                    <button id="enter-key" onclick="submitEmailFunc()"> Enter ↲</label>
+                    <button id="enter-input" onclick="submitEmailFunc()"> Enter ↲</button>
                     <script>
                         var input = document.getElementById("email-input");
                         input.addEventListener("keypress", function(event){
                             if(event.key === "Enter"){
-                                document.getElementById("enter-key").click();
+                                document.getElementById("enter-input").click();
                             }
                         })
                     </script>
-                    <script src="script.js">
-                    </script>
+
+                </div>
+                <div id="envelope-code">
+                    <!-- <input type="text" id="code-input" placeholder="Enter your code..." maxlength="4">
+                    <button id="enter-code" onclick="submitCodeFunc()"> Enter ↲</label> -->
 
                 </div>
                 <div class="heart">

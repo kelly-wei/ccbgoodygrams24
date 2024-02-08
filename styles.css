@@ -1,4 +1,4 @@
-@media only screen and (max-width:1700px){
+@media only screen and (max-width:1500px){
     body{
         display: none;
     }
@@ -41,12 +41,28 @@ footer{
     right: 35%; 
 }
 
-#enter-key{
+#enter-input{
     width: 5%;
     margin: 0;
     position: absolute;
     top: 46%; 
     right: 35%; 
+}
+
+#code-input{
+    width: 8%;
+    margin: 0;
+    position: absolute;
+    top: 43%; 
+    right: 45%; 
+}
+
+#enter-code{
+    width: 5%;
+    margin: 0;
+    position: absolute;
+    top: 46%; 
+    right: 45%; 
 }
 
 a:link{
