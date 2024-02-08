@@ -1,4 +1,4 @@
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:1700px){
     body{
         display: none;
     }
@@ -6,6 +6,10 @@
 
 html, body{
     background-color: #41322C;
+}
+
+body, input, button{
+    font-family: "Playpen Sans", sans-serif;
 }
 
 footer{
@@ -34,6 +38,14 @@ footer{
     margin: 0;
     position: absolute;
     top: 43%; 
+    right: 35%; 
+}
+
+#enter-key{
+    width: 5%;
+    margin: 0;
+    position: absolute;
+    top: 46%; 
     right: 35%; 
 }
 
