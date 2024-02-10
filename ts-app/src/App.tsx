@@ -1,11 +1,16 @@
 import React from 'react';
 import './styles/App.css';
-import EnvelopeInput from './components/FrontEnvelope';
+import Login from './components/Login';
+
 
 function App() {
   return (
-    <div className="App">
-      <EnvelopeInput></EnvelopeInput>
+    <div id="App">
+      <Login></Login>
+
+      <footer className='footer'>
+        <p><a href='https://brownccb.org/2025-events' target='_blank' style={{textDecoration:'none', color:'white'}}>♥ Brown University Class Coordinating Board 2025</a> | February 2024</p>
+      </footer>
     </div>
   );
 }

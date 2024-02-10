@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Playpen+Sans");
+@media only screen and (max-width:1280px){
+    body{
+        display: none;
+    }
+    
+}
+
+.container{
+    height: 90vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    font-family: "Playpen Sans", sans-serif;
+}
+
+.envelope{
+    width: 55%;
+    padding: 0px 15px 0px 15px;
+    height: 60%;
+    background-color: #FFB8C1;
+}
+
+#email-input{
+    width: 30%;
+    margin: 0;
+    position: absolute;
+    top: 45%; 
+    right: 35%; 
+    font-family: "Playpen Sans", sans-serif;
+    font-size: large;
+}
+
+#submit{
+    width: 5%;
+    margin: 0;
+    position: absolute;
+    top: 48.8%; 
+    right: 35%; 
+}
+
+button, body{
+    font-family: "Playpen Sans", sans-serif;
+}
+
+button{
+    font-size: medium;
+}
+
+h3{
+    padding-top: 6%;
+    position: relative;
+    text-align: center;
+    font-size: 1.5vw;
+}
