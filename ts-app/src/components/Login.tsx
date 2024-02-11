@@ -10,7 +10,6 @@ export default function Login(){
     const [code, setCode] = useState("");
     const [name, setName] = useState<string>("");
     const [data, setData] = useState<string[]>([""]);
-    const [img, setImg] = useState<string>("");
 
     const [showEmailInput, setShowEmail] = useState<boolean>(true);
     const [showCodeInput, setShowCode] = useState<boolean>(false);
@@ -34,7 +33,6 @@ export default function Login(){
         var correctCode = data[0];
         if(correctCode == code){
             setShowCode(false); 
-            setImg(data[2].toString()); 
         }
         else{
             alert('Please enter the 4-digit code from your email.');
@@ -74,7 +72,7 @@ export default function Login(){
                     <button id="submit" onClick={() => verifyCode()}>Enter</button>
                 </div> : null
                 }
-                {(!showCodeInput && !showEmailInput) ? <FlippedCard userName={name} src={img}></FlippedCard> : <></>}
+                {(!showCodeInput && !showEmailInput) ? <FlippedCard userName={name} code={code}></FlippedCard> : <></>}
             </div>
         </div>
     )

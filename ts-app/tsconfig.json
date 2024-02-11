@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "src/private/data.ts","src/private", "src/private/images"]
+, "src/private/data.ts","src/private", "src/private/images", "src/index.d.ts"]
 }
