@@ -16,7 +16,7 @@
 
 .envelope{
     width: 55%;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 15px 0px 10px;
     height: 60%;
     background-color: #FFB8C1;
 }
@@ -25,7 +25,7 @@
     width: 30%;
     margin: 0;
     position: absolute;
-    top: 45%; 
+    top: 50%; 
     right: 35%; 
     font-family: "Playpen Sans", sans-serif;
     font-size: large;
@@ -35,7 +35,7 @@
     width: 5%;
     margin: 0;
     position: absolute;
-    top: 48.8%; 
+    top: 54%; 
     right: 35%; 
 }
 
@@ -52,4 +52,8 @@ h3{
     position: relative;
     text-align: center;
     font-size: 1.5vw;
+}
+
+p{
+    font-size: 1vw;
 }

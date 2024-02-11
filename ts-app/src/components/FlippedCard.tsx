@@ -20,12 +20,11 @@ export default function FlippedCard(prop:cardProps){
     <div className="flip-card">
       <div className="flip-card-inner">
         <div className="flip-card-front">
-          <img src={ccbLogo} style={{width:"4.5vw", float:"right"}}></img>
+          <img src={ccbLogo} style={{width:"4.5vw", float:"right", paddingRight:"8px", paddingTop:"15px"}}></img>
               <p style={{textAlign:"left"}}>Your Valentine's Day Goody Gram <br></br> from your CCBae or CCBestie</p>
               
-              <div></div>
               <h3>Hello, {prop.userName}</h3>
-              <h4 style={{textAlign:"center"}}>♥ Hover anywhere on the envelope to view your Digital Goody Gram ♥</h4>
+              <h4 style={{textAlign:"center"}}>Hover anywhere on the envelope to view your Digital Goody Gram!</h4>
         </div>
         <div className="flip-card-back">
           <img className="goodygram" src={imgFound}></img>

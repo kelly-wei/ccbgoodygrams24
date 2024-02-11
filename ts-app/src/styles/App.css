@@ -4,9 +4,7 @@
   height: 100vh;
   overflow: hidden;
   display: grid;
-  place-items: center;
   font-family: "Playpen Sans", sans-serif;
-
 }
 
 @import url("https://fonts.googleapis.com/css?family=Playpen+Sans");
@@ -23,4 +21,8 @@
 
 body{
   font-family: "Playpen Sans", sans-serif;
+}
+
+h2{
+  color: white;
 }
