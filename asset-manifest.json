@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ccbgoodygrams24/static/css/main.4b7462db.css",
+    "main.js": "/ccbgoodygrams24/static/js/main.6a33bcaa.js",
+    "static/js/592.616039b4.chunk.js": "/ccbgoodygrams24/static/js/592.616039b4.chunk.js",
+    "static/media/img0.png": "/ccbgoodygrams24/static/media/img0.6662a85d3d5408ccfebb.png",
+    "static/media/site_icon.png": "/ccbgoodygrams24/static/media/site_icon.643c8392e3a6598aa5c8.png",
+    "static/media/ccbStamp.png": "/ccbgoodygrams24/static/media/ccbStamp.9f3597018a2acac7a477.png",
+    "index.html": "/ccbgoodygrams24/index.html",
+    "main.4b7462db.css.map": "/ccbgoodygrams24/static/css/main.4b7462db.css.map",
+    "main.6a33bcaa.js.map": "/ccbgoodygrams24/static/js/main.6a33bcaa.js.map",
+    "592.616039b4.chunk.js.map": "/ccbgoodygrams24/static/js/592.616039b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b7462db.css",
+    "static/js/main.6a33bcaa.js"
+  ]
+}
