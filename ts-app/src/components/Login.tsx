@@ -1,5 +1,6 @@
 import { useState } from "react";
-import {contact_map} from "../private/data";
+import {email_code} from "../private/data";
+import { name_email } from "../private/data";
 import "../styles/envelope.css";
 import { ControlledInput } from "./ControlledInput";
 import ccbLogo from "../logos/ccbStamp.png";
@@ -15,12 +16,13 @@ export default function Login(){
     const [showCodeInput, setShowCode] = useState<boolean>(false);
 
     function verifyEmail(){
-        if(contact_map.has(email)){
+        if(name_email.has(email)){
             setShowCode(true);
             setShowEmail(false);
-            let arr:string[] = contact_map.get(email) as string[];
-            setData(arr)
-            setName(arr[1])
+            setName(name_email.get(email) as string)
+            // let arr:string[] = name_email.get(email) as string[];
+            // setData(arr)
+            // setName(arr[1])
         }
         else{
             alert('Please enter a valid Brown email!');
@@ -30,10 +32,13 @@ export default function Login(){
     }
 
     function verifyCode(){
-        var correctCode = data[0];
-        if(correctCode == code){
+        var codeArr:string[] = email_code.get(email) as string[]
+        if(codeArr.includes(code)){
             setShowCode(false); 
         }
+        // var correctCode = data[0];
+        // if(correctCode == code){
+        // }
         else{
             alert('Please enter the 4-digit code from your email.');
             setCode("");
@@ -49,7 +54,7 @@ export default function Login(){
                         <img src={ccbLogo} style={{width:"4.5vw", float:"right"}}></img>
                         <p>Your Valentine's Day Goody Gram <br></br> from your CCBae or CCBestie</p>
                         <ControlledInput
-                            value={email}
+                            value={email.toLowerCase()}
                             setValue={setEmail}
                             ariaLabel={"your email input box"}
                             labelText={"Enter your Brown email..."}

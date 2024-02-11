@@ -1,7 +1,16 @@
 import ccbLogo from "../logos/ccbStamp.png";
 import "../styles/flipped.css";
-import img1 from "../private/images/everestmaya-tudor.png";
-import img2 from "../private/images/kieran malik.png";
+import img0 from "../private/images/img0.png";
+import img1 from "../private/images/img1.png";
+import img2 from "../private/images/img2.png";
+import img3 from "../private/images/img3.png";
+import img4 from "../private/images/img4.png";
+import img5 from "../private/images/img5.png";
+import img6 from "../private/images/img6.png";
+import img7 from "../private/images/img7.png";
+import img8 from "../private/images/img8.png";
+import img9 from "../private/images/img9.png";
+import img10 from "../private/images/img10.png";
 
 interface cardProps{
     userName:string;
@@ -10,8 +19,7 @@ interface cardProps{
 
 export default function FlippedCard(prop:cardProps){ 
   let map = new Map<string, string>([
-    ['0000', img1],
-    ['1111', img2]
+    ['0000', img0],
   ])
 
   const imgFound = map.get(prop.code);
