@@ -79,7 +79,7 @@ export default function Login(){
                                 value={code.toLowerCase()}
                                 onChange={(ev) => setCode(ev.target.value)}
                                 placeholder={"Enter your code"}
-                                style={{width:"8vw", alignContent:"center", alignItems:"center"}}
+                                style={{width:"9vw", alignContent:"center", alignItems:"center"}}
                                 onKeyDown={(key) => 
                                     {
                                         if(key.code == "Enter"){
