@@ -31,12 +31,29 @@
     font-size: large;
 }
 
+#code-input{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: 45%;
+    font-family: "Playpen Sans", sans-serif;
+    font-size: large;
+}
+
 #submit{
     width: 5%;
     margin: 0;
     position: absolute;
     top: 54%; 
     right: 35%; 
+}
+
+#submit-code{
+    width: 5%;
+    margin: 0;
+    position: absolute;
+    top: 54%; 
+    right: 46.5%; 
 }
 
 button, body{

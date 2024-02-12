@@ -3,7 +3,6 @@ import './styles/App.css';
 import Login from './components/Login';
 import ccbLogo from "./logos/site_icon.png"
 
-
 function App() {
   function refreshPage(){
     window.location.reload();

@@ -7,15 +7,15 @@ interface ControlledInputProps {
   labelText:string
 }
   
-export function ControlledInput({value, setValue, ariaLabel, labelText}: ControlledInputProps) {
+export function ControlledInputCode({value, setValue, ariaLabel, labelText}: ControlledInputProps) {
   return (
     <input type="text"
-    id='email-input'
+    id='code-input'
         value={value} 
         placeholder={labelText}
         onChange={(ev) => setValue(ev.target.value)}
         aria-label={ariaLabel}
-        style={{width:"25vw", alignContent:"center", alignItems:"center"}}
+        style={{width:"5vw"}}
     ></input>
   );
 }

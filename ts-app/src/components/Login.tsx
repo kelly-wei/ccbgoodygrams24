@@ -5,12 +5,12 @@ import "../styles/envelope.css";
 import { ControlledInput } from "./ControlledInput";
 import ccbLogo from "../logos/ccbStamp.png";
 import FlippedCard from "./FlippedCard";
+import { ControlledInputCode } from "./ControlledInputCode";
 
 export default function Login(){
     const [email, setEmail] = useState<string>("");
     const [code, setCode] = useState("");
     const [name, setName] = useState<string>("");
-    const [data, setData] = useState<string[]>([""]);
 
     const [showEmailInput, setShowEmail] = useState<boolean>(true);
     const [showCodeInput, setShowCode] = useState<boolean>(false);
@@ -20,9 +20,6 @@ export default function Login(){
             setShowCode(true);
             setShowEmail(false);
             setName(name_email.get(email) as string)
-            // let arr:string[] = name_email.get(email) as string[];
-            // setData(arr)
-            // setName(arr[1])
         }
         else{
             alert('Please enter a valid Brown email!');
@@ -36,9 +33,6 @@ export default function Login(){
         if(codeArr.includes(code)){
             setShowCode(false); 
         }
-        // var correctCode = data[0];
-        // if(correctCode == code){
-        // }
         else{
             alert('Please enter the 4-digit code from your email.');
             setCode("");
@@ -56,13 +50,20 @@ export default function Login(){
                             <p>Your Valentine's Day Goody Gram <br></br> from your CCBae or CCBestie</p>
                         </div>
                         <div className="submission">
-                            <h3></h3>
-                            <ControlledInput
+                            <input 
+                                type="text" 
+                                id="email-input"
                                 value={email.toLowerCase()}
-                                setValue={setEmail}
-                                ariaLabel={"your email input box"}
-                                labelText={"Enter your Brown email..."}
-                            ></ControlledInput>
+                                onChange={(ev) => setEmail(ev.target.value)}
+                                placeholder={"Enter your Brown email..."}
+                                style={{width:"30vw", alignItems:"center"}}
+                                onKeyDown={(key) => 
+                                    {
+                                        if(key.code == "Enter"){
+                                            verifyEmail()}
+                                        }
+                                    }
+                            ></input>
                             <button id="submit" onClick={() => verifyEmail()}>Enter</button>
                         </div>
                     </div> 
@@ -74,14 +75,21 @@ export default function Login(){
                     <p>Your Valentine's Day Goody Gram <br></br> from your CCBae or CCBestie</p>
                     </div>
                     <div className="submission">
-                        <h3>Hello, {name}</h3>
-                        <ControlledInput
-                            value={code}
-                            setValue={setCode}
-                            ariaLabel={"your code input box"}
-                            labelText={"Enter your code..."}
-                        ></ControlledInput>
-                        <button id="submit" onClick={() => verifyCode()}>Enter</button>
+                        <input 
+                                type="text" 
+                                id="code-input"
+                                value={code.toLowerCase()}
+                                onChange={(ev) => setCode(ev.target.value)}
+                                placeholder={"Enter your code"}
+                                style={{width:"8vw", alignContent:"center", alignItems:"center"}}
+                                onKeyDown={(key) => 
+                                    {
+                                        if(key.code == "Enter"){
+                                            verifyCode()}
+                                        }
+                                    }
+                        ></input>                        
+                        <button id="submit-code" onClick={() => verifyCode()}>Enter</button>
                     </div>
                 </div> : null
                 }
