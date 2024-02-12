@@ -51,30 +51,38 @@ export default function Login(){
             <div className="envelope">
                 {showEmailInput ? 
                     <div>
-                        <img src={ccbLogo} style={{width:"4.5vw", float:"right"}}></img>
-                        <p>Your Valentine's Day Goody Gram <br></br> from your CCBae or CCBestie</p>
-                        <ControlledInput
-                            value={email.toLowerCase()}
-                            setValue={setEmail}
-                            ariaLabel={"your email input box"}
-                            labelText={"Enter your Brown email..."}
-                        ></ControlledInput>
-                        <button id="submit" onClick={() => verifyEmail()}>Enter</button>
+                        <div className="header">
+                            <img src={ccbLogo} style={{width:"4.5vw", float:"right"}}></img>
+                            <p>Your Valentine's Day Goody Gram <br></br> from your CCBae or CCBestie</p>
+                        </div>
+                        <div className="submission">
+                            <h3></h3>
+                            <ControlledInput
+                                value={email.toLowerCase()}
+                                setValue={setEmail}
+                                ariaLabel={"your email input box"}
+                                labelText={"Enter your Brown email..."}
+                            ></ControlledInput>
+                            <button id="submit" onClick={() => verifyEmail()}>Enter</button>
+                        </div>
                     </div> 
                     : null}
                 {showCodeInput ? 
                 <div>
+                    <div className="header">
                     <img src={ccbLogo} style={{width:"4.5vw", float:"right"}}></img>
                     <p>Your Valentine's Day Goody Gram <br></br> from your CCBae or CCBestie</p>
-                    
-                    <h3>Hello, {name}</h3>
-                    <ControlledInput
-                        value={code}
-                        setValue={setCode}
-                        ariaLabel={"your code input box"}
-                        labelText={"Enter your code..."}
-                    ></ControlledInput>
-                    <button id="submit" onClick={() => verifyCode()}>Enter</button>
+                    </div>
+                    <div className="submission">
+                        <h3>Hello, {name}</h3>
+                        <ControlledInput
+                            value={code}
+                            setValue={setCode}
+                            ariaLabel={"your code input box"}
+                            labelText={"Enter your code..."}
+                        ></ControlledInput>
+                        <button id="submit" onClick={() => verifyCode()}>Enter</button>
+                    </div>
                 </div> : null
                 }
                 {(!showCodeInput && !showEmailInput) ? <FlippedCard userName={name} code={code}></FlippedCard> : <></>}

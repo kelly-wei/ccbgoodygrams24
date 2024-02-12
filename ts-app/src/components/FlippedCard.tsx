@@ -11,6 +11,7 @@ import img7 from "../private/images/img7.png";
 import img8 from "../private/images/img8.png";
 import img9 from "../private/images/img9.png";
 import img10 from "../private/images/img10.png";
+import { useState } from "react";
 
 interface cardProps{
     userName:string;
@@ -24,15 +25,21 @@ export default function FlippedCard(prop:cardProps){
 
   const imgFound = map.get(prop.code);
 
+  const [activeEnvelope, setActiveEnvelope] = useState<boolean>(false);
+
+  const handleFlip = () => {
+    setActiveEnvelope(!activeEnvelope);
+  }
+
   return(
     <div className="flip-card">
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <img src={ccbLogo} style={{width:"4.5vw", float:"right", paddingRight:"8px", paddingTop:"15px"}}></img>
-              <p style={{textAlign:"left"}}>Your Valentine's Day Goody Gram <br></br> from your CCBae or CCBestie</p>
-              
-              <h3>Hello, {prop.userName}</h3>
-              <h4 style={{textAlign:"center"}}>Hover anywhere on the envelope to view your Digital Goody Gram!</h4>
+          <p style={{textAlign:"left"}}>Your Valentine's Day Goody Gram <br></br> from your CCBae or CCBestie</p>
+          
+          <h3>Hello, {prop.userName}</h3>
+          <h4 style={{textAlign:"center"}}>Hover anywhere on the envelope to view your Digital Goody Gram!</h4>
         </div>
         <div className="flip-card-back">
           <img className="goodygram" src={imgFound}></img>
