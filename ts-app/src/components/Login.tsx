@@ -2,10 +2,8 @@ import { useState } from "react";
 import {email_code} from "../private/data";
 import { name_email } from "../private/data";
 import "../styles/envelope.css";
-import { ControlledInput } from "./ControlledInput";
 import ccbLogo from "../logos/ccbStamp.png";
 import FlippedCard from "./FlippedCard";
-import { ControlledInputCode } from "./ControlledInputCode";
 
 export default function Login(){
     const [email, setEmail] = useState<string>("");
